@@ -1,4 +1,4 @@
-obj-m += pcd.o
+obj-m += pcd_n.o
 
 KDIR := /lib/modules/$(shell uname -r)/build
 PWD  := $(shell pwd)

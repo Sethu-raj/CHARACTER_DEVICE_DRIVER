@@ -96,10 +96,10 @@ if((*f_pos + count) > DEV_MEM_SIZE)
     count = DEV_MEM_SIZE - *f_pos;
 
 if(!count)
-
+{
 pr_err("No space left on the device\n");
     return -ENOMEM;
-
+}
 /*copy from user */
 if(copy_from_user(&device_buffer[*f_pos],buff,count)){
     return -EFAULT;
